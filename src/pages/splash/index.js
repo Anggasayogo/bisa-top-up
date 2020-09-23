@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Image, StatusBar, StyleSheet, Text, View } from 'react-native'
 import {IcLogo} from '../../assets';
 import {Gap}from '../../components';
 
 const Splash = ({navigation}) => {
+    useEffect(()=>{
+        setTimeout(()=>{
+            navigation.replace("Login")
+        },3000)
+    },[])
     return (
         <>
             <StatusBar backgroundColor="#33C5FF"/>
