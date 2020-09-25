@@ -1,11 +1,54 @@
-import React from 'react'
+import * as React from 'react'
 import { StyleSheet, Text, View,Image, StatusBar } from 'react-native'
-import { ScrollView } from 'react-native-gesture-handler'
+import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler'
 import Slider from 'react-native-hook-image-slider'
-import { IcHistory, IcHome, IcTopup, IcTransfer,IcBell, Pln, Pulsa, PaketData, Kesehatan, Pdam, Tvcable, Asuransi, Lainyah, BgTop } from '../../assets'
+import { IcHistory, IcHome, IcTopup, IcTransfer,IcBell, Pln, Pulsa, PaketData, Kesehatan, Pdam, Tvcable, Asuransi, Lainyah, BgTop, Game, Wifi, TiketBioskop, TiketPesawat, RentalMobil } from '../../assets'
 import { Gap } from '../../components'
+import BottomSheet from 'reanimated-bottom-sheet';
+import Animated from 'react-native-reanimated';
 
-const Home = () => {
+const Home = ({navigation}) => {
+    const renderContent = () => (
+        <View
+          style={{
+            backgroundColor: "#F7F8FC",
+            padding: 16,
+            height: 450,
+          }}
+        >
+          <Text style={{textAlign: 'center'}}>Swipe down to close</Text>
+          <View style={styles.mainmenu}>
+                   <View style={styles.childmainmenu}>
+                        <TouchableOpacity style={styles.logoextramenus}>
+                            <Image style={styles.logoextramain} source={Game} />
+                            <Text style={styles.mainame}>Top Up Game</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.logoextramenus}>
+                            <Image style={styles.logoextramain} source={Wifi} />
+                            <Text style={styles.mainame}>Bayar Internet</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.logoextramenus}>
+                            <Image style={styles.logoextramain} source={TiketBioskop} />
+                            <Text style={styles.mainame}>Ticket Bioskop</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.logoextramenus}>
+                            <Image style={styles.logoextramain} source={TiketPesawat} />
+                            <Text style={styles.mainame}>Ticket Peswat</Text>
+                        </TouchableOpacity>
+                   </View>
+                   <Gap height={15}/>
+                   <View style={styles.childmainmenu}>
+                        <TouchableOpacity style={styles.logoextramenus}>
+                            <Image style={styles.logoextramain} source={RentalMobil} />
+                            <Text style={styles.mainame}>Rental Mobil</Text>
+                        </TouchableOpacity>
+                   </View>
+                </View>
+        </View>
+    );
+    
+    const sheetRef = React.useRef(null);
+
     return (
         <>
         <StatusBar backgroundColor="#33C5FF"/>
@@ -24,57 +67,57 @@ const Home = () => {
                     </View>
                 </View>
                 <View style={styles.main}>
-                    <View>
+                    <TouchableOpacity>
                         <Image style={styles.logomain} source={IcTopup} />
                         <Text style={styles.mainame}>Top Up</Text>
-                    </View>
-                    <View>
+                    </TouchableOpacity>
+                    <TouchableOpacity>
                         <Image style={styles.logomain} source={IcTransfer} />
                         <Text style={styles.mainame}>Transfer</Text>
-                    </View>
-                    <View>
+                    </TouchableOpacity>
+                    <TouchableOpacity>
                         <Image style={styles.logomain} source={IcHistory} />
                         <Text style={styles.mainame}>History</Text>
-                    </View>
+                    </TouchableOpacity>
                 </View>
                 <ScrollView showsVerticalScrollIndicator={false}>
                 <View style={styles.mainmenu}>
                    <View style={styles.childmainmenu}>
-                        <View style={styles.logoextramenus}>
+                        <TouchableOpacity style={styles.logoextramenus}>
                             <Image style={styles.logoextramain} source={Pln} />
                             <Text style={styles.mainame}>Listrik</Text>
-                        </View>
-                        <View style={styles.logoextramenus}>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.logoextramenus}>
                             <Image style={styles.logoextramain} source={Pulsa} />
                             <Text style={styles.mainame}>Isi Pulsa</Text>
-                        </View>
-                        <View style={styles.logoextramenus}>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.logoextramenus}>
                             <Image style={styles.logoextramain} source={PaketData} />
                             <Text style={styles.mainame}>Data</Text>
-                        </View>
-                        <View style={styles.logoextramenus}>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.logoextramenus}>
                             <Image style={styles.logoextramain} source={Kesehatan} />
                             <Text style={styles.mainame}>Doctor</Text>
-                        </View>
+                        </TouchableOpacity>
                    </View>
                    <Gap height={10}/>
                    <View style={styles.childmainmenu}>
-                        <View style={styles.logoextramenus}>
+                        <TouchableOpacity style={styles.logoextramenus}>
                             <Image style={styles.logoextramain} source={Pdam} />
                             <Text style={styles.mainame}>PDAM</Text>
-                        </View>
-                        <View style={styles.logoextramenus}>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.logoextramenus}>
                             <Image style={styles.logoextramain} source={Tvcable} />
                             <Text style={styles.mainame}>TVcable</Text>
-                        </View>
-                        <View style={styles.logoextramenus}>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.logoextramenus}>
                             <Image style={styles.logoextramain} source={Asuransi} />
                             <Text style={styles.mainame}>Asurnsi</Text>
-                        </View>
-                        <View style={styles.logoextramenus}>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.logoextramenus} onPress={() => sheetRef.current.snapTo(0)}>
                             <Image style={styles.logoextramain} source={Lainyah} />
                             <Text style={styles.mainame}>Lainyah</Text>
-                        </View>
+                        </TouchableOpacity>
                    </View>
                 </View>
                 <Text style={{paddingHorizontal: 15,fontSize: 12,fontWeight: 'bold'}}>Info Dan Promosi Special</Text>
@@ -89,6 +132,7 @@ const Home = () => {
                 </ScrollView>
             </View>
         </View>
+        <BottomSheet ref={sheetRef} snapPoints={[450, 300, 0]} borderRadius={30} renderContent={renderContent}/>
         </>
     )
 }

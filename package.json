@@ -20,7 +20,8 @@
     "react-native-hook-image-slider": "^1.2.1",
     "react-native-reanimated": "^1.13.0",
     "react-native-safe-area-context": "^3.1.8",
-    "react-native-screens": "^2.11.0"
+    "react-native-screens": "^2.11.0",
+    "reanimated-bottom-sheet": "^1.0.0-alpha.22"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",

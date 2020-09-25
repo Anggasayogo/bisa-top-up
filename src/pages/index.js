@@ -4,6 +4,7 @@ import Register from './register';
 import Home from './home'
 import Qrscan from './qrscan';
 import Profile from './profile'
+import Example from './example'
 
 export{
     Login,
@@ -12,4 +13,5 @@ export{
     Home,
     Qrscan,
     Profile,
+    Example,
 }

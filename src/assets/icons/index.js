@@ -14,6 +14,11 @@ import Pdam from './pdam.png'
 import Tvcable from './tvcable.png'
 import Asuransi from './asuransi.png'
 import Lainyah from './lainyah.png'
+import Game from './game.png'
+import Wifi from './wifi.png'
+import TiketBioskop from './ticket.png'
+import TiketPesawat from './peswat.png'
+import RentalMobil from './mobil.png'
 
 export{
     IcLogo,
@@ -31,5 +36,10 @@ export{
     Pdam,
     Tvcable,
     Asuransi,
-    Lainyah
+    Lainyah,
+    Wifi,
+    TiketBioskop,
+    TiketPesawat,
+    Game,
+    RentalMobil
 }
