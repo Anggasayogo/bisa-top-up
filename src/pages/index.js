@@ -5,6 +5,7 @@ import Home from './home'
 import Qrscan from './qrscan';
 import Profile from './profile'
 import Example from './example'
+import History from './history'
 
 export{
     Login,
@@ -14,4 +15,5 @@ export{
     Qrscan,
     Profile,
     Example,
+    History,
 }

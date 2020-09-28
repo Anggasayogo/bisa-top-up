@@ -3,7 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import { BottomTabNavigator } from '../components';
-import { Example, Home, Login, Profile, Qrscan, Register, Splash } from '../pages';
+import { Example, Home, Login, Profile, Qrscan, Register, Splash, History } from '../pages';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -26,6 +26,7 @@ const Routes = () => {
             <Stack.Screen name="Register" component={Register} options={{headerShown: false}}/>
             <Stack.Screen name="MainApp" component={MainApp} options={{headerShown: false}}/>
             <Stack.Screen name="Example" component={Example} options={{headerShown: false}}/>
+            <Stack.Screen name="History" component={History} options={{headerShown: false}}/>
         </Stack.Navigator>
     )
 }

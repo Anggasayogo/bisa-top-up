@@ -16,7 +16,7 @@ export default Inputs
 const styles = StyleSheet.create({
     input:{
         borderWidth: 1,
-        borderColor: "0 4 4 rgba(0, 0, 0, 0.25)",
+        borderColor: "0 4 4 rgba(0, 0, 0, 0.15)",
         borderBottomWidth: 3,
         borderRadius: 25,
         padding: 12,

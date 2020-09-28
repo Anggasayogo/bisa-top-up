@@ -75,7 +75,7 @@ const Home = ({navigation}) => {
                         <Image style={styles.logomain} source={IcTransfer} />
                         <Text style={styles.mainame}>Transfer</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={()=>{navigation.navigate('History')}}>
                         <Image style={styles.logomain} source={IcHistory} />
                         <Text style={styles.mainame}>History</Text>
                     </TouchableOpacity>

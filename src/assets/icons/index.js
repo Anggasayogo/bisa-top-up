@@ -19,6 +19,7 @@ import Wifi from './wifi.png'
 import TiketBioskop from './ticket.png'
 import TiketPesawat from './peswat.png'
 import RentalMobil from './mobil.png'
+import IcKembali from './kembali.png'
 
 export{
     IcLogo,
@@ -41,5 +42,6 @@ export{
     TiketBioskop,
     TiketPesawat,
     Game,
-    RentalMobil
+    RentalMobil,
+    IcKembali,
 }
