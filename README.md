@@ -22,6 +22,6 @@ lalu untuk mencobanya kamu bisa menjalankan
 npx react-native run-android
 ```
 Lalu akan muncul seperti ini
-![banner](dist/images/gambar1.jpg =150x150)
-![banner](dist/images/gambar3.jpg =150x150)
-![banner](dist/images/gambar2.jpg =150x150)
+![](dist/images/gambar1.jpg =150)
+![](dist/images/gambar3.jpg =150)
+![](dist/images/gambar2.jpg =150)
