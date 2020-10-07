@@ -21,3 +21,7 @@ lalu untuk mencobanya kamu bisa menjalankan
 ```
 npx react-native run-android
 ```
+Lalu akan muncul seperti ini
+![banner](dist/images/gambar1.jpg)
+![banner](dist/images/gambar3.jpg)
+![banner](dist/images/gambar2.jpg)
