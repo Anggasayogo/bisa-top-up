@@ -20,8 +20,16 @@ import TiketBioskop from './ticket.png'
 import TiketPesawat from './peswat.png'
 import RentalMobil from './mobil.png'
 import IcKembali from './kembali.png'
+import IcLogout from './logout.png'
+import ICRating from './rating.png'
+import ICProfchange from './changeprof.png'
+import IcNext from './next.png'
 
 export{
+    IcNext,
+    IcLogout,
+    ICRating,
+    ICProfchange,
     IcLogo,
     IcHome,
     IcScan,

@@ -16,9 +16,9 @@ const Login = ({navigation}) => {
             <Gap height={15}/>
             <Inputs label="Password"/>
             <Gap height={30}/>
-            <Buttons title="Login"/>
+            <Buttons title="Login" onPress={()=>{navigation.navigate('MainApp')}}/>
             <Gap height={30}/>
-            <TouchableOpacity onPress={()=>{navigation.navigate('MainApp')}} style={styles.opinion}>
+            <TouchableOpacity onPress={()=>{navigation.navigate('Register')}} style={styles.opinion}>
                <Text>Register  disini jika kamu belum mempunyai akuan</Text>
             </TouchableOpacity>
         </ScrollView>
