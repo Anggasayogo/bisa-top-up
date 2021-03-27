@@ -1,17 +1,16 @@
 'use strict';
 
 import React, { Component } from 'react';
-
 import {
-  AppRegistry,
-  StyleSheet,
+  Linking, StyleSheet,
   Text,
-  TouchableOpacity,
-  Linking
-} from 'react-native';
 
+
+  View
+} from 'react-native';
 import QRCodeScanner from 'react-native-qrcode-scanner';
-import { RNCamera } from 'react-native-camera';
+
+
 
 class Qrscan extends Component {
   onSuccess = e => {
@@ -22,27 +21,32 @@ class Qrscan extends Component {
 
   render() {
     return (
-      <QRCodeScanner
-        onRead={this.onSuccess}
-        flashMode={RNCamera.Constants.FlashMode.torch}
-        topContent={
-          <Text style={styles.centerText}>
-            Go to{' '}
-            <Text style={styles.textBold}>wikipedia.org/wiki/QR_code</Text> on
-            your computer and scan the QR code.
-          </Text>
-        }
-        bottomContent={
-          <TouchableOpacity style={styles.buttonTouchable}>
-            <Text style={styles.buttonText}>OK. Got it!</Text>
-          </TouchableOpacity>
-        }
-      />
+      <View style={styles.pages}>
+        <View style={styles.container}>
+          <QRCodeScanner
+            onRead={this.onSuccess}
+            showMarker={true}
+            reactivate={true}
+            topContent={
+            <Text style={styles.centerText}>Find Qr/Barcode </Text>
+          }/>
+        </View>
+      </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  pages:{
+    flex: 1,
+    backgroundColor: '#33C5FF'
+  },
+  container:{
+    flex: 1,
+    borderBottomRightRadius: 30,
+    borderBottomLeftRadius: 30,
+    backgroundColor: 'white'
+  },
   centerText: {
     flex: 1,
     fontSize: 18,
